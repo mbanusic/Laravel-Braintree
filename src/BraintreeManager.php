@@ -57,7 +57,7 @@ class BraintreeManager extends AbstractManager
      */
     protected function getConfigName(): string
     {
-        return 'laravel-braintree';
+        return 'braintree';
     }
 
     /**
