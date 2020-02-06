@@ -14,6 +14,7 @@ declare(strict_types=1);
 namespace BrianFaust\Braintree;
 
 use Braintree\Configuration;
+use Illuminate\Support\Arr;
 use InvalidArgumentException;
 
 class BraintreeFactory
@@ -23,7 +24,7 @@ class BraintreeFactory
      *
      * @param array $config
      *
-     * @return \Braintree\Braintree
+     * @return \BrianFaust\Braintree\Braintree
      */
     public function make(array $config): Braintree
     {
@@ -51,7 +52,7 @@ class BraintreeFactory
             }
         }
 
-        return array_only($config, ['environment', 'merchant_id', 'public_key', 'private_key']);
+        return Arr::only($config, ['environment', 'merchant_id', 'public_key', 'private_key']);
     }
 
     /**
@@ -59,7 +60,7 @@ class BraintreeFactory
      *
      * @param array $auth
      *
-     * @return \Braintree\Braintree
+     * @return \BrianFaust\Braintree\Braintree
      */
     protected function getClient(array $auth): Braintree
     {
