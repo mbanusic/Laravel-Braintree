@@ -1,13 +1,12 @@
 language: php
-dist: trusty
-sudo: false
 
 php:
-  - 7.1
   - 7.2
+  - 7.3
+  - 7.4
 
 install:
-  - travis_retry composer install --no-interaction
+  - travis_retry composer install --no-ansi --no-interaction --no-suggest
 
 script:
   - vendor/bin/phpunit --coverage-clover clover.xml

@@ -19,7 +19,7 @@ class Braintree
 
     public function __call(string $method, array $arguments)
     {
-        if (substr($method, 0, 3) == 'get') {
+        if (substr($method, 0, 3) === 'get') {
             // Remove the get*-prefix to get a class name
             $sdkClass = substr($method, 3);
 
