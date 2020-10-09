@@ -2,16 +2,7 @@
 
 declare(strict_types=1);
 
-/*
- * This file is part of Laravel Braintree.
- *
- * (c) Brian Faust <hello@brianfaust.de>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
-
-namespace BrianFaust\Braintree;
+namespace Danhunsaker\Braintree;
 
 use Braintree\Configuration;
 use Illuminate\Support\Arr;
@@ -24,7 +15,7 @@ class BraintreeFactory
      *
      * @param array $config
      *
-     * @return \BrianFaust\Braintree\Braintree
+     * @return \Danhunsaker\Braintree\Braintree
      */
     public function make(array $config): Braintree
     {
@@ -60,7 +51,7 @@ class BraintreeFactory
      *
      * @param array $auth
      *
-     * @return \BrianFaust\Braintree\Braintree
+     * @return \Danhunsaker\Braintree\Braintree
      */
     protected function getClient(array $auth): Braintree
     {
